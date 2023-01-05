@@ -26,3 +26,30 @@ array	                    result
 입출력 예 #3
 [1]에는 1만 있으므로 최빈값은 1입니다.
 */
+
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int a[1001] = {0, };
+
+// array_len은 배열 array의 길이입니다.
+int solution(int array[], size_t array_len) {
+    int answer, i, max = -1, b = 0;
+    for(i = 0; i < array_len; i ++) {
+        if(max < ++a[array[i]]) {
+            max = a[answer = array[i]];
+        }
+    }
+    
+    for(i = 1; i < 1e3; i++) {
+        if(a[i] != 0 && a[i] == max) {
+            if (b != 0 )
+                return -1;
+            b = 1;
+        }
+    }
+    
+    return answer;
+}
