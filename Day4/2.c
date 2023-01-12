@@ -30,3 +30,19 @@ n	    result
 최소 2판을 시키면 피자가 12조각으로 모두 세 조각씩 먹을 수 있습니다.
 
 */
+
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int solution(int n) {
+    int answer = 0;
+    int i = 0;
+    
+       for (i = 1; i <= n; i += 1) {
+    if ((i * 6) % n == 0) return answer = i;
+  }
+    
+    return answer;
+}
