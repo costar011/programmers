@@ -25,4 +25,22 @@ n	    result
 
 입출력 예 #3
 15명이 최소 한 조각씩 먹기 위해서 최소 3판이 필요합니다.
+
 */
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int solution(int n) {
+    int answer = 0;
+    
+    if(n % 7 == 0 ) {
+        answer = n / 7;
+    }
+    else {
+        answer = (n / 7 + 1);
+    }
+    
+    return answer;
+}
